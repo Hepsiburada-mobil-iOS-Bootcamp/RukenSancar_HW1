@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SQi-tp-ew5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Week_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOW-Ry-CUi">
+                                <rect key="frame" x="133" y="188" width="148" height="30"/>
+                                <state key="normal" title="Algorithms Questions"/>
+                                <connections>
+                                    <action selector="goToAlgorithmPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKq-L7-xZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-wK-VJr">
+                                <rect key="frame" x="132" y="246" width="150" height="30"/>
+                                <state key="normal" title="Basic Operation Tests"/>
+                                <connections>
+                                    <action selector="basicsTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTw-dJ-yWQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oCt-wK-VJr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0bS-6U-c4r"/>
+                            <constraint firstItem="IOW-Ry-CUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xs-XP-Fx0"/>
+                            <constraint firstItem="IOW-Ry-CUi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="DpE-uR-4YD"/>
+                            <constraint firstItem="oCt-wK-VJr" firstAttribute="top" secondItem="IOW-Ry-CUi" secondAttribute="bottom" constant="28" id="jSF-uI-cAd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAZ-gy-WHm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cOP-bP-dHF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SQi-tp-ew5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HKK-BS-y2L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TeB-M9-t1r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNz-I5-wIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+        <!--Algorithm View Controller-->
+        <scene sceneID="SHt-vH-wz7">
+            <objects>
+                <viewController storyboardIdentifier="AlgorithmViewController" id="c89-zJ-H4H" customClass="AlgorithmViewController" customModule="iOS_Week_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AJf-S5-xGY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9nM-0U-dw2">
+                                <rect key="frame" x="146" y="144" width="122" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8U-X5-24Y">
+                                        <rect key="frame" x="29.5" y="0.0" width="63" height="30"/>
+                                        <state key="normal" title="Two Sum"/>
+                                        <connections>
+                                            <action selector="twoSumAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="9F0-AC-O1j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UC-ML-kEP">
+                                        <rect key="frame" x="22.5" y="40" width="77" height="30"/>
+                                        <state key="normal" title="Palindrome"/>
+                                        <connections>
+                                            <action selector="isPalindromAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="dMy-ia-kiH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n6-A9-EkP">
+                                        <rect key="frame" x="30" y="80" width="62" height="30"/>
+                                        <state key="normal" title="Anagram"/>
+                                        <connections>
+                                            <action selector="AnagramAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="lEU-Ho-y6X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGA-Ab-zWm">
+                                        <rect key="frame" x="28.5" y="120" width="65" height="30"/>
+                                        <state key="normal" title="Duplicate"/>
+                                        <connections>
+                                            <action selector="duplicationAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="PrL-QK-rPg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqP-Vo-Na7">
+                                        <rect key="frame" x="15" y="160" width="92" height="30"/>
+                                        <state key="normal" title="Merge Arrays"/>
+                                        <connections>
+                                            <action selector="mergeArrayAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="q1x-vW-8fa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kc-i5-DeD">
+                                        <rect key="frame" x="5" y="200" width="112" height="30"/>
+                                        <state key="normal" title="Missing Number"/>
+                                        <connections>
+                                            <action selector="missingNumberAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="2Va-ab-hVp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-mq-Ad9">
+                                        <rect key="frame" x="0.0" y="240" width="122" height="30"/>
+                                        <state key="normal" title="Array Intersection"/>
+                                        <connections>
+                                            <action selector="arrayIntersectionAction:" destination="c89-zJ-H4H" eventType="touchUpInside" id="EQ6-U3-iNQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5m3-tv-X29"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9nM-0U-dw2" firstAttribute="top" secondItem="5m3-tv-X29" secondAttribute="top" constant="100" id="LOP-TT-add"/>
+                            <constraint firstItem="9nM-0U-dw2" firstAttribute="centerX" secondItem="AJf-S5-xGY" secondAttribute="centerX" id="NB0-dY-xjp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HcP-5E-aFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.6956521739132" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
