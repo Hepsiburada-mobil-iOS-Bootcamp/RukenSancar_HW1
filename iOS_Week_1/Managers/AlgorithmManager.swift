@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AlgoruthmManager: AlgorithmProtocol {
+class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
     /*
