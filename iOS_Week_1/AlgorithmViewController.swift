@@ -27,7 +27,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.isPalindromTest()
     }
     
     @IBAction func AnagramAction(_ sender: Any) {
